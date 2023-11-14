@@ -18,12 +18,12 @@ nav_order: 1
 [Label-Free Concept Bottleneck Models](https://arxiv.org/abs/2304.06129)
 
 - **T. Oikarinen**, S. Das, L.M. Nguyen, T.W. Weng
-- ICLR 2023, [code](https://github.com/Trustworthy-ML-Lab/Label-free-CBM)
+- ICLR 2023, [code](https://github.com/Trustworthy-ML-Lab/Label-free-CBM), [video presentation](https://iclr.cc/virtual/2023/poster/11326)
 
 [CLIP-Dissect: Automatic Description of Neuron Representations in Deep Vision Networks](https://arxiv.org/abs/2204.10965)
 
 - **T. Oikarinen**, T.W. Weng
-- ICLR 2023 Spotlight, [code](https://github.com/Trustworthy-ML-Lab/CLIP-dissect)
+- ICLR 2023 Spotlight, [code](https://github.com/Trustworthy-ML-Lab/CLIP-dissect), [video presentation](https://iclr.cc/virtual/2023/poster/11328)
 
 <br/>
 
@@ -38,7 +38,7 @@ nav_order: 1
 [Robust Deep Reinforcement Learning through Adversial Loss](https://arxiv.org/abs/2008.01976)
 
 - **T. Oikarinen**, W. Zhang, A. Megretski, L. Daniel, T.W. Weng
-- NeurIPS 2021, [code](https://github.com/tuomaso/radial_rl_v2)
+- NeurIPS 2021, [code](https://github.com/tuomaso/radial_rl_v2), [video presentation](https://nips.cc/virtual/2021/poster/27196)
 
 <br/>
 
