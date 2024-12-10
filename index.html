@@ -1,0 +1,588 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+    font-family: Arial, Helvetica;
+    font-weight: 100;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    color: FFFFFF;
+    background-color: 1a1a1a;
+    /* background-color: FBFBFB; */
+}
+
+.header {
+    font-weight: 300;
+    line-height: 1.15em;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #73ccff;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-size: 19;
+    font-weight: 300;
+    margin: 16px 0px 4px 0px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+    <!-- font-family: 'Titillium Web'; -->
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 26px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 12px;
+}
+
+.affiliations-new {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #818181;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 14px;
+    color: #565656;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 110px;
+    margin-right: 110px;
+    text-align: center;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+
+  display: inline-flex;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.example-btn {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+
+    display: inline-flex;
+    margin: 8px;
+    padding: 8px 8px;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+
+    /* background-color: #4cd468; */
+    background-color: #5364cc;
+    color: white !important;
+    font-size: 20px;
+    width: 220px;
+    font-weight: 600;
+}
+.example-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.example-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.spaced-list{
+    margin: 10px 0;
+}
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title>Tuomas's homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="Linear Explanations for Individual Neurons"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    </head>
+ 
+<body>
+    
+
+<div class="container">
+    <div class="paper-title">
+    <h2>
+        Tuomas Oikarinen
+    </div>
+    <hr>
+    <br>
+    <div style="display: flex; align-items: top;">
+        <p style="margin-right: 25px;">
+            Developing scalable ways to understand deep learning. Especially excited about
+             using (mechanistic) interpretability to help improve safety and reliability of neural networks. Current
+             interests include automated interpretability, rigourous interpretability evals, concept bottleneck models (CBMs) and sparse autoencoders (SAEs).
+             <br><br>
+            PhD student at UC San Diego advised by <a href="https://lilywenglab.github.io/">Prof. Tsui-Wei (Lily) Weng</a>. <br>
+            Bachelor of Science in Computer Science and Engineering and in Philosophy from MIT
+            <br><br>
+            <a href="https://scholar.google.com/citations?user=M3KZnPwAAAAJ">Google Scholar</a> /
+            <a href="https://github.com/tuomaso">Github</a> /
+            email: toikarinen@ucsd.edu
+        </p>
+        <img class="card-img-top" src="assets/IMG_6530.jpg" style="width:200px">
+    </div>
+    
+    
+    <section id="select_pub">
+        <h2>Select Publications (Interpretability)</h2>
+        <hr>
+
+        <h3><a href="https://arxiv.org/abs/2405.06855">Linear Explanations for Individual Neurons</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/Linear-Explanations">code</a>] 
+            - [<a href="https://lilywenglab.github.io/Linear-Explanation/">website</a>] </h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, T.-W. Weng </li>
+            <li>ICML 2024 </li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2304.06129">Label-Free Concept Bottleneck Models</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/Label-free-CBM">code</a>] 
+            - [<a href="https://iclr.cc/virtual/2023/poster/11326">slides</a>] </h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, S. Das, L. M. Nguyen, T.-W. Weng </li>
+            <li>ICLR 2023 </li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2204.10965">CLIP-Dissect: Automatic Description of Neuron Representations in Deep Vision Networks</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/CLIP-dissect">code</a>] 
+            - [<a href="https://iclr.cc/virtual/2023/poster/11328">slides</a>] </h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, T.-W. Weng </li>
+            <li>ICLR 2023 (Spotlight)</li>
+        </ul>
+        
+    </section>
+
+    <section id="Interpretability">
+        <h2>Other Interpretability</h2>
+        <hr>
+
+        <h3><a href="https://openreview.net/forum?id=HSW49uvCNW">Concept Driven Continual Learning</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/concept-driven-continual-learning">code</a>]
+            - [<a href="https://lilywenglab.github.io/Concept_Driven_Continual_Learning/">project website</a>] </h3>
+        <ul>
+            <li>S.-H. Yang, <b>T. Oikarinen</b>, T.-W. Weng</li>
+            <li>TMLR 2024</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2403.13771">Describe-and-Dissect: Interpreting Neurons in Vision Networks with Language Models</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/Describe-and-Dissect">code</a>]
+            - [<a href="https://lilywenglab.github.io/Describe-and-Dissect/">project website</a>] </h3>
+        <ul>
+            <li>N. Bai*, R. A. Iyer*, <b>T. Oikarinen</b>, T.-W. Weng</li>
+            <li>ICML 2024 Mechanistic Interpretability Workshop (Spotlight)</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2407.04307">Crafting Large Language Models for Enhanced Interpretability</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/Concept-Bottleneck-LLM">code</a>]</h3>
+        <ul>
+            <li>C. Sun, <b>T. Oikarinen</b>, T.-W. Weng</li>
+            <li>ICML 2024 Mechanistic Interpretability Workshop</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2304.13346">Concept-Monitor: Understanding DNN training through individual neurons</a> 
+        </h3>
+        <ul>
+            <li>M. A. Khan, <b>T. Oikarinen</b>, T.-W. Weng</li>
+            <li>AAAI 2024 DAI Workshop</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2310.06200">The Importance of Prompt Tuning for Automated Neuron Explanations</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/Efficient-LLM-automated-interpretability">code</a>]
+            - [<a href="https://lilywenglab.github.io/Efficient-LLM-automated-interpretability/">project website</a>] </h3>
+        <ul>
+            <li>J. Lee*, <b>T. Oikarinen*</b>, A. Chatha, K.-C Chang, Y. Chen, T.-W. Weng</li>
+            <li>NeurIPS 2023 ATTRIB workshop</li>
+        </ul>   
+        
+    </section>
+
+    <section id="Adversarial Robustness">
+        <h2>Adversarial Robustness</h2>
+        <hr>
+
+        <h3><a href="https://arxiv.org/abs/2310.16332">Corrupting Neuron Explanations of Deep Visual Features</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/corrupting_neuron_explanations">code</a>]</h3>
+        <ul>
+            <li>D. Srivastava, <b>T. Oikarinen</b>, T.-W. Weng</li>
+            <li>ICCV 2023</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/2008.01976">Robust Deep Reinforcement Learning through Adversarial Loss</a> 
+            - [<a href="https://github.com/tuomaso/radial_rl_v2">code</a>] 
+            - [<a href="https://nips.cc/virtual/2021/poster/27196">slides</a>] </h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, W. Zhang, A. Megretski, L. Daniel, T.-W. Weng </li>
+            <li>NeurIPS 2021</li>
+        </ul>
+        
+    </section>
+
+    <section id="Applied ML">
+        <h2>Applied ML</h2>
+        <hr>
+
+        <h3><a href="https://arxiv.org/abs/2010.13668">GraphMDN: Leveraging Graph Structure and Deep Learning to Solve Inverse Problems</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/corrupting_neuron_explanations">code</a>]</h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, D. Hannah, S. Kazerounian</li>
+            <li>IJCNN 2021</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/1906.06151">Landslide Geohazard Assessment with Convolutional Neural Networks using Sentinel-2 Imagery Data</a> 
+            - [<a href="https://github.com/Yichabod/natural_disaster_pred">code</a>]</h3>
+        <ul>
+            <li>S. Ullo, M. Langenkamp, <b>T. Oikarinen</b>, M.P. Del Rosso, A. Sebastianelli, F. Piccirillo, S. Sica </li>
+            <li>IEEE IGARSS 2019</li>
+        </ul>
+
+        <h3><a href="https://arxiv.org/abs/1906.06151">Deep Convolutional Network for Animal Sound Classification and Source Attribution using Dual Audio Recordings</a> 
+            - [<a href="https://marmosetbehavior.mit.edu/deep-convolutional-network-animal-sound-classification">code</a>]</h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, K. Srinivasan, O. Meisner, J. Hyman, S. Parmar, A. Fanucci-Kiss, R. Desimone, R. Landman, G. Feng</li>
+            <li>The Journal of the Acoustical Society of America, 2019</li>
+        </ul>
+        
+    </section>
+
+</div>
+</body>
+</html>
