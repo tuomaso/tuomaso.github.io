@@ -9,7 +9,7 @@
 <style type="text/css">
 body {
     font-family: Arial, Helvetica;
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: 17px;
     margin-left: auto;
     margin-right: auto;
@@ -422,6 +422,18 @@ pre {
   }
 }
 
+.card-img-top {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    max-height: 255px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
 </style>
 <link rel="stylesheet" href="bootstrap-grid.css">
 
@@ -457,13 +469,20 @@ pre {
             <a href="https://github.com/tuomaso">Github</a> /
             email: toikarinen@ucsd.edu
         </p>
-        <img class="card-img-top" src="assets/IMG_6530.jpg" style="width:200px">
+        <img class="card-img-top" src="assets/IMG_6530.jpg">
     </div>
     
     
     <section id="select_pub">
         <h2>Select Publications (Interpretability)</h2>
         <hr>
+        <h3><a href="https://arxiv.org/abs/2506.05774">Evaluating Neruon Explanations: A Unified Framework with Sanity Checks</a> 
+            - [<a href="https://github.com/Trustworthy-ML-Lab/Neuron_Eval">code</a>] 
+            - [<a href="https://lilywenglab.github.io/Neuron_Eval/">website</a>] </h3>
+        <ul>
+            <li><b>T. Oikarinen</b>, G. Yan, T.-W. Weng </li>
+            <li>ICML 2025 </li>
+        </ul>
 
         <h3><a href="https://arxiv.org/abs/2405.06855">Linear Explanations for Individual Neurons</a> 
             - [<a href="https://github.com/Trustworthy-ML-Lab/Linear-Explanations">code</a>] 
